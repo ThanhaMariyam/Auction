@@ -1,35 +1,37 @@
 import React, { useState, useRef } from "react";
 import "./Carousel.css";
 
+const BASE = import.meta.env.BASE_URL;
+
 const initialPlayers = [
-  { id: 1, name: "AFTHAB", img: "/AFTHAB.png" },
-  { id: 2, name: "ASHIQ", img: "/ASHIQ.png" },
-  { id: 3, name: "ASIF", img: "/ASIF.png" },
-  { id: 4, name: "ASLAM", img: "/ASLAM.png" },
-  { id: 5, name: "FAISAL NASEEB", img: "/FAISALNASEEB.png" },
-  { id: 6, name: "HADI", img: "/HADI.png" },
-  { id: 7, name: "HANEEN", img: "/HANEEN.png" },
-  { id: 8, name: "HARSH", img: "/HARSH.png" },
-  { id: 9, name: "HASSAN", img: "/HASSAN.png" },
-  { id: 10, name: "JABID", img: "/JABID.png" },
-  { id: 11, name: "JALEEL", img: "/JALEEL.png" },
-  { id: 12, name: "JASEEL", img: "/JASEEL.png" },
-  { id: 13, name: "JASEEM", img: "/JASEEM.png" },
-  { id: 14, name: "JAZEEL", img: "/JAZEEL.png" },
-  { id: 15, name: "JINAN", img: "/JINAN.png" },
-  { id: 16, name: "JISHNU P", img: "/JISHNU P.png" },
-  { id: 17, name: "JISHNU", img: "/JISHNU.png" },
-  { id: 18, name: "JUNAID", img: "/JUNAID.png" },
-  { id: 19, name: "LABEEB", img: "/LABEEB.png" },
-  { id: 20, name: "NADEEM", img: "/NADEEM.png" },
-  { id: 21, name: "NIHAD", img: "/NIHAD.png" },
-  { id: 22, name: "RAHSHAL", img: "/RAHSHAL.png" },
-  { id: 23, name: "RIFAY", img: "/RIFAY.png" },
-  { id: 24, name: "RIZWAN", img: "/RIZWAN.png" },
-  { id: 25, name: "SHAHAD", img: "/SHAHAD.png" },
-  { id: 26, name: "SHAMEEM", img: "/SHAMEEM.png" },
-  { id: 27, name: "SHIBILI", img: "/SHIBILI.png" },
-  { id: 28, name: "SUHAIL", img: "/SUHAIL.png" },
+  { id: 1, name: "AFTHAB", img: `${BASE}AFTHAB.png` },
+  { id: 2, name: "ASHIQ", img: `${BASE}ASHIQ.png` },
+  { id: 3, name: "ASIF", img: `${BASE}ASIF.png` },
+  { id: 4, name: "ASLAM", img: `${BASE}ASLAM.png` },
+  { id: 5, name: "FAISAL NASEEB", img: `${BASE}FAISAL_NASEEB.png` },
+  { id: 6, name: "HADI", img: `${BASE}HADI.png` },
+  { id: 7, name: "HANEEN", img: `${BASE}HANEEN.png` },
+  { id: 8, name: "HARSH", img: `${BASE}HARSH.png` },
+  { id: 9, name: "HASSAN", img: `${BASE}HASSAN.png` },
+  { id: 10, name: "JABID", img: `${BASE}JABID.png` },
+  { id: 11, name: "JALEEL", img: `${BASE}JALEEL.png` },
+  { id: 12, name: "JASEEL", img: `${BASE}JASEEL.png` },
+  { id: 13, name: "JASEEM", img: `${BASE}JASEEM.png` },
+  { id: 14, name: "JAZEEL", img: `${BASE}JAZEEL.png` },
+  { id: 15, name: "JINAN", img: `${BASE}JINAN.png` },
+  { id: 16, name: "JISHNU P", img: `${BASE}JISHNU_P.png` },
+  { id: 17, name: "JISHNU", img: `${BASE}JISHNU.png` },
+  { id: 18, name: "JUNAID", img: `${BASE}JUNAID.png` },
+  { id: 19, name: "LABEEB", img: `${BASE}LABEEB.png` },
+  { id: 20, name: "NADEEM", img: `${BASE}NADEEM.png` },
+  { id: 21, name: "NIHAD", img: `${BASE}NIHAD.png` },
+  { id: 22, name: "RAHSHAL", img: `${BASE}RAHSHAL.png` },
+  { id: 23, name: "RIFAY", img: `${BASE}RIFAY.png` },
+  { id: 24, name: "RIZWAN", img: `${BASE}RIZWAN.png` },
+  { id: 25, name: "SHAHAD", img: `${BASE}SHAHAD.png` },
+  { id: 26, name: "SHAMEEM", img: `${BASE}SHAMEEM.png` },
+  { id: 27, name: "SHIBILI", img: `${BASE}SHIBILI.png` },
+  { id: 28, name: "SUHAIL", img: `${BASE}SUHAIL.png` },
 ];
 
 const Carousel = () => {
@@ -92,7 +94,12 @@ const Carousel = () => {
 
   return (
     <div className="carousel-wrapper glitter-box">
-      <div className="heading"><img className="logo" src="/WhatsApp_Image_2025-12-14_at_00.23.36_a59e74c7-removebg-preview.png" alt="" /><h1 className="title glitter-text">SUMJAY PREMIER LEAGUE 2025</h1></div>
+      <div className="heading"><img
+  className="logo"
+  src={`${import.meta.env.BASE_URL}WhatsApp_Image_2025-12-14_at_00.23.36_a59e74c7-removebg-preview.png`}
+  alt="logo"
+/>
+<h1 className="title glitter-text">SUMJAY PREMIER LEAGUE 2025</h1></div>
 
 
       {!selectedPlayer && (
